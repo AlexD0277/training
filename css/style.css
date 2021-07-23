@@ -210,6 +210,7 @@ body {
 .intro {
     height: 100vh;
     background: url(../img/intro-bg.jpg) no-repeat;
+    background-size: cover;
 }
 
 /*  Intro styles ends*/
