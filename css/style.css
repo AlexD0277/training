@@ -163,7 +163,7 @@ html {
 .wrapper {
     max-width: 1060px;
     margin: 0 auto; /* выравнивает wrapper внутри родителя по центру*/
-    height: 100vh;
+    /*height: 100vh;*/
 }
 img {
     max-width: 100%;
@@ -211,12 +211,13 @@ body {
 .header-link:focus {
     opacity: 0.75;
 }
-/*  Intro styles strats*/
+/*  Intro styles starts*/
 .intro {
     min-height: 100vh;
     background: url(../img/intro-bg.jpg) no-repeat;
     background-size: cover;
     padding-top: 263px;
+    border: none;
 }
 .intro-title {
     font-weight: 500;
@@ -236,6 +237,7 @@ body {
 .search-form-intfo {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 376px;
 }
 .search-form-field {
     background: transparent url(../img/svg/circle_ico.svg) no-repeat left 6px;
@@ -275,6 +277,9 @@ body {
 
 /*  Intro styles ends*/
 /*  Benefits styles starts*/
+.benefits {
+    margin-bottom: 131px;
+}
 .benefits-title {
     font-weight: 500;
     font-size: 35px;
@@ -287,6 +292,7 @@ body {
     transform: translateY(-100%);
     background-color: white;
     width: 100%;
+    border: none;
 }
 .benefits-wrap {
     max-width: 1262px;
@@ -294,6 +300,7 @@ body {
     background-color: white;
     box-shadow: 0px 2px 20px rgba(21, 24, 36, 0.15993);
     position: relative;
+    border: none;
 }
 .benefits-cards {
     display: grid;
@@ -303,6 +310,7 @@ body {
 }
 .benefits-card {
     grid-column: span 1;
+    padding-bottom: 112px;
 }
 .card-ico {
     margin-bottom: 37px;
@@ -331,5 +339,10 @@ body {
     line-height: 24px;
     color: #006dfe;
     text-decoration: none;
+    background: url(../img/svg/arrow.svg) no-repeat 95% center;
+    transition: 0.2s all;
+}
+.card__more:hover,
+.card__more:focus {
     background: url(../img/svg/arrow.svg) no-repeat right center;
 }
