@@ -9,5 +9,6 @@ fun main(args: Array<String>){
         y = index[x]
         println("Fruit = ${fruit[y]}")
         x=x+1
+        //mkgjmhgjhg
     }
 }
