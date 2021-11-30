@@ -3,7 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/PhraseOMatic.iml" filepath="$PROJECT_DIR$/PhraseOMatic.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/Prj.iml" filepath="$PROJECT_DIR$/Prj.iml" />
+>>>>>>> 51ea9b5 (RPS)
 =======
       <module fileurl="file://$PROJECT_DIR$/Prj.iml" filepath="$PROJECT_DIR$/Prj.iml" />
 >>>>>>> 51ea9b5 (RPS)
