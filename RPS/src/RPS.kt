@@ -2,5 +2,5 @@ fun getGameChoise(optionsParam:Array<String>)= optionsParam[(Math.random()*optio
 fun main() {
     val options = arrayOf("Rock","Paper", "Scissors")
     val gameChoice = getGameChoise(options)
-    //109
+    //110
 }
