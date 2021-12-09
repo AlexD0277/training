@@ -15,9 +15,20 @@ fun getUserChoise(optionsParam:Array<String>):String{
     }
     return userChoise
 }
+fun printResult(userChoise: String, gameChoise: String){
+    if (userChoise == gameChoise) println("Tie!")
+    else if ((userChoise=="Rock" && gameChoise=="Scissors")||
+            (userChoise=="Scissors" && gameChoise=="Paper")||
+            (userChoise=="Paper" && gameChoise=="Rock"))
+            println("You win!");
+        else println("Game win!")
+
+
+}
 fun main() {
     val options = arrayOf("Rock","Paper", "Scissors")
     val gameChoice = getGameChoise(options)
     val userChoise = getUserChoise(options)
+    printResult(userChoise,gameChoice)
     //111
 }
