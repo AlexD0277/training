@@ -29,5 +29,22 @@ class Hippo:Animal(){
     override fun eat() {
         println("The Hippo is eating $food")
     }
+}
 
+open class Canine: Animal(){
+    override fun roam() {
+        println("Canine is roaming")
+    }
+}
+class Wolf:Canine(){
+    override val image="wolf.jpg"
+    override val food="meat"
+    override val habitat="forests"
+    override fun makeNoise() {
+        println("Hooooowl!")
+    }
+
+    override fun eat() {
+        println("The wolf is eating $food")
+    }
 }
