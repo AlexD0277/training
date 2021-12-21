@@ -1,15 +1,19 @@
-open class Animal{
-    open val image = ""
-    open val food =""
-    open val habitat =""
+interface Roamable{
+    fun roam()
+}
+class Vehicle:Roamable{
+    override fun roam() {
+        println("The Vehicle is roaming")
+    }
+}
+abstract class Animal:Roamable{
+    abstract val image:String
+    abstract val food:String
+    abstract val habitat:String
     open val hunger=10
-    open fun makeNoise(){
-        println("The animal making a noise")
-    }
-    open fun eat(){
-        println("The animal is eating")
-    }
-    open fun roam(){
+    abstract fun makeNoise()
+    abstract fun eat()
+    override fun roam(){
         println("The animal is roaming")
     }
     fun sleep(){
@@ -31,7 +35,7 @@ class Hippo:Animal(){
     }
 }
 
-open class Canine: Animal(){
+abstract class Canine: Animal(){
     override fun roam() {
         println("Canine is roaming")
     }
@@ -67,4 +71,4 @@ fun main() {
     vet.giveShot(hippo)
 }
 
-//175
+//209
