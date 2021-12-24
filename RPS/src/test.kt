@@ -1,14 +1,23 @@
-class Cat(var name: String? = "") {
-    fun Meow() { println("Meow!") }
+class BadException : Exception()
+
+fun riskyCode(test:String) {
+    if (test == "Yes") {throw BadException()}
+    print("r")
+    print("o")
 }
-fun main(args: Array<String>) {
-    var myCats = arrayOf(Cat("Misty"),
-        null,
-        Cat("Socks"))
-    for (cat in myCats) {
-        if (cat != null) {
-            print("${cat?.name}: ")
-            cat?.Meow()
-        }
+fun myFunction(test: String) {
+    try {
+        print("t")
+        print("h")
+        riskyCode(test)
+    } catch (e: BadException) {
+        print("a")
+    } finally {
+        print("w")
+        print("s")
     }
 }
+fun main() {
+    myFunction("es")
+}
+//281
