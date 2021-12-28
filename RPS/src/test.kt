@@ -1,23 +1,19 @@
-class BadException : Exception()
-
-fun riskyCode(test:String) {
-    if (test == "Yes") {throw BadException()}
-    print("r")
-    print("o")
-}
-fun myFunction(test: String) {
-    try {
-        print("t")
-        print("h")
-        riskyCode(test)
-    } catch (e: BadException) {
-        print("a")
-    } finally {
-        print("w")
-        print("s")
-    }
-}
 fun main() {
-    myFunction("es")
+    val petsLiam = listOf("Cat", "Dog", "Fish", "Fish")
+    val petsSophia = listOf("Cat", "Owl")
+    val petsNoah = listOf("Dog", "Dove", "Dog", "Dove")
+    val petsEmily = listOf("Hedgehog")
+    var pets = mutableListOf<String>()
+    pets.addAll(petsLiam)
+    pets.addAll(petsEmily)
+    pets.addAll(petsNoah)
+    pets.addAll(petsSophia)
+    println(pets)
+    println(pets.size)
+    pets.sort()
+    println(pets.toSet())
 }
+
+
+
 //281
