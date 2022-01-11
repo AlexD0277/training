@@ -52,11 +52,11 @@ class Wolf:Canine(){
         println("The wolf is eating $food")
     }
 }
-class Vet(){
-    fun giveShot(animal:Animal){
-        animal.makeNoise()
-    }
-}
+//class Vet(){
+//    fun giveShot(animal:Animal){
+//        animal.makeNoise()
+//    }
+//}
 
 fun main() {
 //    val animals= arrayOf(Hippo(),Wolf())
