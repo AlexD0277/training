@@ -16,5 +16,7 @@ fun main() {
     var veganFoodConsumer: Consumer<VeganFood>
     veganFoodConsumer = Vegan()
     veganFoodConsumer = Person()
+    val calc:(Int)->Int
+    
 }
 
