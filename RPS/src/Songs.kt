@@ -13,4 +13,5 @@ fun main(){
     song2.Play()
     song2.Stop()
     song3.Play()
+    song1
 }
