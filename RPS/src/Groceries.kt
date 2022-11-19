@@ -7,20 +7,24 @@ fun main() {
         Grocery("Olive oil", "Pantry", "Bottle", 6.0, 1),
         Grocery("Ice cream", "Frozen", "Pack", 3.0, 2))
 
-    val vegetables = groceries.filter { it.category=="Vegetable" }
-    println("vegetables: $vegetables")
-    val notFrozen = groceries.filterNot { it.category=="Frozen" }
-    println("not frozen: $notFrozen")
-    val groceryNames = groceries.map({it.name})
-    println("names $groceryNames")
-    val newPrices = groceries.filter { it.unitPrice>3 }.map { it.unitPrice*2 }
-    println("new prices: $newPrices")
-    println("grocery names ")
-    groceries.forEach { println(it.name)}
-    println("grocery with unit price > 3")
-    groceries.filter { it.unitPrice>3 }.forEach{println(it.name)}
-    var itNames = ""
-    groceries.forEach{itNames += "${it.name} "}
-    println("item names $itNames")
+    groceries.groupBy { it.category }.forEach{
+        println(it.key)
+        it.value.forEach{ println("  ${it.name}")}
+    }
+    val ints = listOf(1,2,3,4)
+    val sumOfInts = ints.fold(0){rez,item->rez+item}
+    println("Sum of ints $sumOfInts")
+    val names = groceries.fold(""){res,item-> res+" ${item.name}"}
+    println("Names $names")
+
+//    val summ = groceries.filter { it.category == "Vegetable" }.fold(0.0){res,item->res+item.unitPrice*item.quantity}
+//    groceries.filter { it.unitPrice * it.quantity < 5.0 }.map { it.name }
+//    groceries.groupBy { it.category }.forEach {
+//        println("Category ${it.key} ${it.value.fold(0.0) { res, item -> res + item.unitPrice * item.quantity }}")
+      groceries.filterNot {it.unit=="Bottle" }.groupBy { it.unit }.forEach {
+        println(it.key)
+          return@forEach
+        it.value.forEach{ println("   ${it.name}")}
+      }
 
 }
